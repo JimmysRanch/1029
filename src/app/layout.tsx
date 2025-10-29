@@ -1,19 +1,21 @@
-import type { ReactNode } from 'react';
-import Navbar from '@/components/Navbar';
 import './globals.css';
+import Navbar from '../components/Navbar';
 
 type RootLayoutProps = {
-  children: ReactNode;
+  children: any;
+};
+
+export const metadata = {
+  title: "Jimmy's Ranch Dashboard",
+  description: 'Operational overview for Jimmy\'s Ranch.'
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-100">
+      <body className="antialiased">
         <Navbar />
-        <main className="mx-auto w-full max-w-6xl space-y-8">
-          {children}
-        </main>
+        <main className="p-6">{children}</main>
       </body>
     </html>
   );

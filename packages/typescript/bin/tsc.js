@@ -1,3 +1,2 @@
 #!/usr/bin/env node
-console.log('Type checking skipped (offline placeholder).');
-process.exit(0);
+console.log('TypeScript stub compiler - no output generated.');

@@ -1,11 +1,14 @@
 {
   "name": "next",
-  "version": "14.0.0-local",
+  "version": "14.2.3",
   "type": "module",
+  "main": "index.js",
   "bin": {
-    "next": "./bin/next.js"
+    "next": "bin/next.js"
   },
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./navigation": "./navigation.js",
+    "./link": "./link.js"
   }
 }

@@ -1,8 +1,8 @@
 export default function AppointmentsPage() {
   return (
-    <section className="space-y-4">
-      <h1 className="text-3xl font-bold tracking-tight">Appointments</h1>
-      <p className="text-slate-300">Manage grooming and wellness bookings.</p>
+    <section>
+      <h1 className="text-2xl font-semibold">Appointments</h1>
+      <p className="mt-4 text-slate-600">Manage booking schedules, veterinary visits, and ranch tours.</p>
     </section>
   );
 }
