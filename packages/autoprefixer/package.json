@@ -1,0 +1,8 @@
+{
+  "name": "autoprefixer",
+  "version": "10.0.0-local",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  }
+}
