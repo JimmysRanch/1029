@@ -1,29 +1,52 @@
-const navItems = [
-  { label: 'Dashboard', href: '/' },
-  { label: 'Appointments', href: '/appointments' },
-  { label: 'Clients', href: '/clients' },
-  { label: 'Staff', href: '/staff' },
-  { label: 'POS', href: '/pos' },
-  { label: 'Inventory', href: '/inventory' },
-  { label: 'Finance', href: '/finance' },
-  { label: 'Messages', href: '/messages' },
-  { label: 'Reports', href: '/reports' },
-  { label: 'Settings', href: '/settings' }
+'use client';
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+const links = [
+  { href: '/', label: 'Dashboard' },
+  { href: '/appointments', label: 'Appointments' },
+  { href: '/clients', label: 'Clients' },
+  { href: '/staff', label: 'Staff' },
+  { href: '/pos', label: 'POS' },
+  { href: '/inventory', label: 'Inventory' },
+  { href: '/finance', label: 'Finance' },
+  { href: '/messages', label: 'Messages' },
+  { href: '/reports', label: 'Reports' },
+  { href: '/settings', label: 'Settings' }
 ];
 
+function buildClassName(isActive: boolean) {
+  const base = 'rounded-md px-3 py-2 text-sm font-medium transition-colors';
+  const active = 'bg-slate-900 text-white shadow-sm';
+  const inactive = 'text-slate-600 hover:bg-slate-100 hover:text-slate-900';
+  return `${base} ${isActive ? active : inactive}`;
+}
+
 export default function Navbar() {
+  const pathname = usePathname() || '/';
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <span className="text-lg font-semibold tracking-wide text-sky-300">Scruffy Butts</span>
-        <nav className="flex items-center gap-6 text-sm font-medium text-slate-200">
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="transition-colors hover:text-sky-300">
-              {item.label}
-            </a>
-          ))}
-        </nav>
-      </div>
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+        <span className="text-lg font-semibold text-slate-900">Jimmy&apos;s Ranch</span>
+        <ul className="flex flex-wrap items-center gap-2">
+          {links.map((link) => {
+            const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href);
+            return (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={buildClassName(isActive)}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
     </header>
   );
 }

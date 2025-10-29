@@ -1,6 +1,6 @@
 {
   "name": "typescript",
-  "version": "5.0.0-local",
+  "version": "5.5.4",
   "type": "module",
   "bin": {
     "tsc": "./bin/tsc.js"

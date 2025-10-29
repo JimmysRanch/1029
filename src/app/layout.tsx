@@ -1,19 +1,19 @@
+import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import Navbar from '@/components/Navbar';
 import './globals.css';
+import Navbar from '../components/Navbar';
 
-type RootLayoutProps = {
-  children: ReactNode;
+export const metadata: Metadata = {
+  title: "Jimmy's Ranch Dashboard",
+  description: "Operational overview for Jimmy's Ranch."
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-slate-950 text-slate-100">
+      <body className="bg-slate-50 text-slate-900 antialiased">
         <Navbar />
-        <main className="mx-auto w-full max-w-6xl space-y-8">
-          {children}
-        </main>
+        <main className="p-6">{children}</main>
       </body>
     </html>
   );

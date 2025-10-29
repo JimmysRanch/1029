@@ -1,8 +1,0 @@
-{
-  "name": "@supabase/supabase-js",
-  "version": "2.0.0-local",
-  "type": "module",
-  "exports": {
-    ".": "./index.js"
-  }
-}

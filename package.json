@@ -1,23 +1,27 @@
 {
-  "name": "scruffybutts-nextjs",
-  "private": true,
+  "name": "1029",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
+  "workspaces": [
+    "packages/*",
+    "packages/@supabase/*"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@supabase/supabase-js": "file:packages/supabase-js",
-    "next": "file:packages/next",
-    "react": "file:packages/react",
-    "react-dom": "file:packages/react-dom"
+    "@supabase/supabase-js": "2.45.0",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "file:packages/autoprefixer",
-    "postcss": "file:packages/postcss",
-    "tailwindcss": "file:packages/tailwindcss",
-    "typescript": "file:packages/typescript"
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.39",
+    "tailwindcss": "3.4.7",
+    "typescript": "5.5.4"
   }
 }

@@ -1,8 +1,8 @@
 export default function POSPage() {
   return (
-    <section className="space-y-4">
-      <h1 className="text-3xl font-bold tracking-tight">POS</h1>
-      <p className="text-slate-300">Process retail and service transactions.</p>
+    <section>
+      <h1 className="text-2xl font-semibold">Point of Sale</h1>
+      <p className="mt-4 text-slate-600">Process on-site transactions and review purchase history.</p>
     </section>
   );
 }

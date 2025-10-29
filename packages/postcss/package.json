@@ -1,6 +1,6 @@
 {
   "name": "postcss",
-  "version": "8.4.0-local",
+  "version": "8.4.39",
   "type": "module",
   "exports": {
     ".": "./index.js"
