@@ -1,7 +1,3 @@
-export function resolveConfig(config) {
-  return config;
+export function loadConfig() {
+  return {};
 }
-
-export default {
-  resolveConfig
-};

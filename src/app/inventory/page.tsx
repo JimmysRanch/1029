@@ -1,8 +1,8 @@
 export default function InventoryPage() {
   return (
-    <section className="space-y-4">
-      <h1 className="text-3xl font-bold tracking-tight">Inventory</h1>
-      <p className="text-slate-300">Track product stock, supplies, and reorder points.</p>
+    <section>
+      <h1 className="text-2xl font-semibold">Inventory</h1>
+      <p className="mt-4 text-slate-600">Track feed, equipment, and merchandise stock levels.</p>
     </section>
   );
 }

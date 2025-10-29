@@ -1,11 +1,9 @@
 {
   "name": "typescript",
-  "version": "5.0.0-local",
+  "version": "5.4.5",
   "type": "module",
+  "main": "index.js",
   "bin": {
-    "tsc": "./bin/tsc.js"
-  },
-  "exports": {
-    ".": "./index.js"
+    "tsc": "bin/tsc.js"
   }
 }

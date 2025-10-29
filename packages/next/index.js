@@ -1,1 +1,1 @@
-export { run } from './lib/cli.js';
+export function noop() {}

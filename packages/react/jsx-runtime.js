@@ -1,17 +1,8 @@
-const jsxSymbol = Symbol.for('react.element');
-const fragmentSymbol = Symbol.for('react.fragment');
-
-function createElement(type, props, key) {
-  return {
-    $$typeof: jsxSymbol,
-    type,
-    key: key ?? null,
-    ref: props && props.ref != null ? props.ref : null,
-    props: { ...props }
-  };
+export const Fragment = Symbol.for('react.fragment');
+export function jsx(type, props, key) {
+  return { type, props: { ...props, key } };
 }
-
-export const Fragment = fragmentSymbol;
-export const jsx = createElement;
-export const jsxs = createElement;
-export const jsxDEV = createElement;
+export const jsxs = jsx;
+export function jsxDEV(type, props) {
+  return { type, props };
+}

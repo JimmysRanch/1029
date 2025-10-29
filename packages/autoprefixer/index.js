@@ -1,10 +1,5 @@
 export default function autoprefixer() {
   return {
-    postcssPlugin: 'autoprefixer',
-    Once(root) {
-      return root;
-    }
+    postcssPlugin: 'autoprefixer-stub'
   };
 }
-
-export const postcss = true;
